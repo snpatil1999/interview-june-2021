@@ -1,9 +1,9 @@
 package exam;
-
+import.util.Scanner;
 public class ConvertToBinary {
 
-  public String toBinary(final int n) {
-    string bin = ""
+  public StringtoBinary(final int n) {
+    String bin = ""
       try{
         if(n<0);
       }
@@ -18,5 +18,11 @@ public class ConvertToBinary {
         n = n/2;
     }
     return bin;
+  }
+  public static void main(String[] args){
+      int no;
+      Scanner s=new Scanner(System.in);
+      n = s.nextInt();
+      System.out.println(StringtoBinary(no));
   }
 }
