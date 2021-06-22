@@ -1,27 +1,14 @@
 package exam;
-import.util.Scanner;
+import util.*;
+import java.io.*;
 public class CountCombinations {
-
-  public int getNumberOfWays(final int total, final int k) {
-    int last;
-    last=total[k-1];
-    for(int i=no-1;i>0;i++)
-    {
-        total[i]=total[i-1];
-    }
-    total[0] = last;
-    for(int i=0;i<no;i++)
-    {
-        System.ou.println(total[i]+"");
-    }
-    return 0;
-  }
+  
   public static void main(String[] args){
-      int no;
+      int sum;
       int[] arr=new int[100];
       Scanner sc = new Scanner(System.in);
-      System.out.println("Enter the no of element you want to enter :");
-      no = sc.nextLine();
+      System.out.println("Enter the sum :");
+      sum = sc.nextLine();
       System.out.println("Enter the numbers :");
       for(int i=0;i<n;i++)
       {
@@ -29,5 +16,24 @@ public class CountCombinations {
       }
     getNumberOfWays(arr,no);
   }
+ public int getNumberOfWays(int[] candidates, int target) {
+     List<List<Integer>> result=new ArrayList<>();
+        recur(candidates,0,target,result,new ArrayList());
+        System.out.println(result)
+        return 0;
+    }
+    public void recur(int[] c,int start,int target,List<List<Integer>> result,List<Integer> list)
+    {
+        if(target<0)
+            return;
+        if(target==0)
+            result.add(new ArrayList(list));
+        for(int i=start;i<c.length;i++)
+        {
+            list.add(c[i]);
+            recur(c,i,target-c[i],result,list);
+            list.remove(list.size()-1);
+        }
+    }
 
 }
