@@ -1,5 +1,5 @@
 package exam;
-
+import java.util.Scanner;
 public class ShiftElementsInArray {
 
   public void shift(int[] arr) {
