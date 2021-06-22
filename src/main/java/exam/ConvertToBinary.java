@@ -3,7 +3,20 @@ package exam;
 public class ConvertToBinary {
 
   public String toBinary(final int n) {
-    //TODO write your code here to achieve the desired result as explained in Readme file for this problem.
-    return "";
+    string bin = ""
+      try{
+        if(n<0);
+      }
+    catch(Exception e)
+    {
+      System.out.println(e);
+    }
+    while(n > 0)
+    {
+        int a = n%2 ;
+        bin = a + bin;
+        n = n/2;
+    }
+    return bin;
   }
 }
